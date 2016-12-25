@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:id="@+id/activity_main"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"    >
+    <ImageView
+        android:id="@+id/imageDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/beneficial"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp" />
+
+
+    <TextView
+        android:text="@string/current_point_of_counsel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|center"
+        android:id="@+id/lblCurrentPointOfCounsel"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        tools:layout_width="match_parent"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|center"
+        android:id="@+id/textViewCurrentPointOfCounsel"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"/>
+
+    <TextView
+        android:text="@string/dateAssigned"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|center"
+        android:id="@+id/lblDateAssigned"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        tools:layout_width="match_parent"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|center"
+        android:id="@+id/dateAssigned"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"/>
+
+
+</LinearLayout>
+

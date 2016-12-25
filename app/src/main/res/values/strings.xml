@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Counsel Form</string>
+    <string name="current_point_of_counsel">Current Point of Counsel:</string>
+    <string name="home">Home</string>
+    <string name="selectPoc">Assign New Point of Counsel</string>
+    <string name="viewHistory">View History</string>
+    <string name="title_activity_select_point_of_counsel">SelectPointOfCounsel</string>
+    <string name="dateAssigned">Date Assigned:</string>
+    <string name="title_activity_view_history">ViewHistory</string>
+    <string name="counsel">Counsel</string>
+    <string name="assigned">Assigned</string>
+    <string name="dateCompleted">Completed</string>
+</resources>

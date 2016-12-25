@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:title="@string/home"
+        android:actionLayout="@layout/activity_main"/>
+    <item
+        android:id="@+id/selectPointOfCounsel"
+        android:title="@string/selectPoc"
+        android:actionLayout="@layout/select_point_of_counsel"/>
+    <item
+        android:id="@+id/viewHistory"
+        android:title="@string/viewHistory"
+        android:actionLayout="@layout/activity_view_history"/>
+</menu>
