@@ -66,6 +66,12 @@
         android:paddingRight="10dp"
         android:paddingTop="10dp"/>
 
-
+    <Button
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:cursorVisible="true"
+        android:layout_width="match_parent"
+        android:id="@+id/button_url"
+        android:text="View Online"/>
 </LinearLayout>
 
