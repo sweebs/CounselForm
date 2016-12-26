@@ -27,7 +27,7 @@
         android:id="@+id/lblCurrentPointOfCounsel"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
         tools:layout_width="match_parent"
-        android:paddingBottom="10dp"
+        android:paddingBottom="0dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:paddingTop="10dp"/>
@@ -38,10 +38,10 @@
         android:gravity="center_horizontal|center"
         android:id="@+id/textViewCurrentPointOfCounsel"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        android:paddingBottom="10dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:paddingTop="10dp"/>
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"/>
 
     <TextView
         android:text="@string/dateAssigned"
@@ -51,7 +51,7 @@
         android:id="@+id/lblDateAssigned"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
         tools:layout_width="match_parent"
-        android:paddingBottom="10dp"
+        android:paddingBottom="0dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:paddingTop="10dp"/>
@@ -61,10 +61,10 @@
         android:gravity="center_horizontal|center"
         android:id="@+id/dateAssigned"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        android:paddingBottom="10dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:paddingTop="10dp"/>
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"/>
 
     <Button
         android:layout_height="wrap_content"

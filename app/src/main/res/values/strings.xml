@@ -10,6 +10,7 @@
     <string name="counsel">Counsel</string>
     <string name="assigned">Assigned</string>
     <string name="dateCompleted">Completed</string>
+    <string name="sendSMS">Send Point of Counsel</string>
     <string-array name="urls">
         <item>http://wol.jw.org/en/wol/d/r1/lp-e/1102001070</item>
         <item>http://wol.jw.org/en/wol/d/r1/lp-e/1102001071</item>
