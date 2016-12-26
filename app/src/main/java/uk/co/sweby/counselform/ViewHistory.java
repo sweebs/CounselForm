@@ -52,6 +52,7 @@ public class ViewHistory extends AppCompatActivity {
             textView = new TextView(this);
             textView.setTextColor(Color.BLACK);
             textView.setText(R.string.counsel);
+
             tr.addView(textView);
             tab.addView(tr);
 
@@ -61,6 +62,10 @@ public class ViewHistory extends AppCompatActivity {
             tr.setLayoutParams(lp);
             textView = new TextView(this);
             textView.setText(item.getPointOfCounsel());
+            textView.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT));
+            textView.setWidth(300);
+            textView.setMaxLines(4);
+            textView.setSingleLine(false);
             tr.addView(textView);
             tab.addView(tr);
 
