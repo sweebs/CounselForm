@@ -2,8 +2,10 @@ package uk.co.sweby.counselform;
 
 import android.content.Intent;
 import android.content.res.Resources;
+import android.database.Cursor;
 import android.icu.text.SimpleDateFormat;
 import android.net.Uri;
+import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
@@ -20,6 +22,8 @@ import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -32,6 +36,8 @@ import java.io.InputStreamReader;
 import java.nio.charset.Charset;
 import java.util.StringTokenizer;
 import java.util.regex.Pattern;
+
+import static android.R.attr.data;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -98,9 +104,21 @@ public class MainActivity extends AppCompatActivity {
             case R.id.viewHistory:
                 launchViewHistory();
                 return true;
+            case R.id.sendSMS:
+                sendSMS();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    private void sendSMS() {
+        String bodyOfMessage = currentPointOfCounsel +
+                ", " + dateAssigned;
+        Intent smsIntent = new Intent(Intent.ACTION_VIEW);
+        smsIntent.setType("vnd.android-dir/mms-sms");
+        smsIntent.putExtra("sms_body", bodyOfMessage);
+        startActivity(smsIntent);
     }
 
     private void launchSelectPointOfCounsel() {

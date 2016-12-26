@@ -8,4 +8,8 @@
         android:id="@+id/viewHistory"
         android:title="@string/viewHistory"
         android:actionLayout="@layout/activity_view_history"/>
+    <item
+        android:id="@+id/sendSMS"
+        android:title="@string/sendSMS"
+        android:actionLayout="@layout/activity_view_history"/>
 </menu>
