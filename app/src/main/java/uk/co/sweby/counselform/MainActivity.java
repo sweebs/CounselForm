@@ -1,5 +1,6 @@
 package uk.co.sweby.counselform;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.database.Cursor;
@@ -21,6 +22,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 
@@ -66,32 +68,43 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        setFields();
+        if (currentPointOfCounsel != null) {
+            setFields();
+        }
     }
 
 
 
     private void setFields() {
-        TextView displayPoc = (TextView) findViewById(R.id.textViewCurrentPointOfCounsel);
-        displayPoc.setText(currentPointOfCounsel);
-        TextView displayDate = (TextView) findViewById(R.id.dateAssigned);
-        displayDate.setText(dateAssigned);
-        Resources res = getResources();
-        StringTokenizer str = new StringTokenizer(currentPointOfCounsel, " ");
-        str.nextToken();
-        String index = str.nextToken();
-        int i = Integer.parseInt(index);
-        String[] urls = res.getStringArray(R.array.urls);
-        url = urls[i-1];
-        Button button = (Button) findViewById(R.id.button_url);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Uri uriUrl = Uri.parse(url);
-                Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
-                startActivity(launchBrowser);
-            }
-        });
+        try {
+            TextView displayPoc = (TextView) findViewById(R.id.textViewCurrentPointOfCounsel);
+            displayPoc.setText(currentPointOfCounsel);
+            TextView displayDate = (TextView) findViewById(R.id.dateAssigned);
+            displayDate.setText(dateAssigned);
+            Resources res = getResources();
+            StringTokenizer str = new StringTokenizer(currentPointOfCounsel, " ");
+            str.nextToken();
+            String index = str.nextToken();
+            int i = Integer.parseInt(index);
+            String[] urls = res.getStringArray(R.array.urls);
+            url = urls[i - 1];
+            Button button = (Button) findViewById(R.id.button_url);
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Uri uriUrl = Uri.parse(url);
+                    Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+                    startActivity(launchBrowser);
+                }
+            });
+        } catch (Exception e) {
+            Context context = getApplicationContext();
+            CharSequence text = "Exception on Save : " + e.toString();
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+        }
     }
 
 
